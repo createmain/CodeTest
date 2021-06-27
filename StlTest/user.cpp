@@ -6,7 +6,11 @@
 #include <ctime>
 
 #define NULL nullptr
-#define MAX_HASH_TABLE 10
+#define MAX_HASH_TABLE 10 //Size of hash Table, You can evaluate performance by hash table size.
+/*
+ stl's hash value has unsigned int type. This is limited hash size by modulo operation.
+ for duplicated hash key, it has list for avoid duplicated item management with linear search.
+*/
 
 using namespace std;
 
@@ -77,6 +81,7 @@ char* find(char* key) {
 		Node* node = findNode(hashTable[hashed], key);
 
 		if (node != NULL) {
+			//Node is not deleted. So it's working.
 			return const_cast<char*>(node->value.c_str());
 		}
 	}

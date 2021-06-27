@@ -9,7 +9,6 @@ extern void add(char* key, char* value);
 extern void remove(char* key);
 extern char* find(char* key);
 
-
 char* generateRandomString(size_t length)
 {
 	const char* charmap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -21,7 +20,7 @@ char* generateRandomString(size_t length)
 	//return &result[0];
 
 	char* ca = new char[result.size() + 1];
-	std::copy(result.begin(), result.end(), ca);
+	copy(result.begin(), result.end(), ca);
 	ca[result.size()] = '\0';
 
 	return ca;
