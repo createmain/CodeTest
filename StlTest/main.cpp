@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 extern void add(char* key, char* value);
 extern void remove(char* key);
 extern char* find(char* key);
