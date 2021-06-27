@@ -17,7 +17,6 @@ char* generateRandomString(size_t length)
 	string result;
 	result.reserve(length);
 	generate_n(back_inserter(result), length, generator);
-	//return &result[0];
 
 	char* ca = new char[result.size() + 1];
 	copy(result.begin(), result.end(), ca);
